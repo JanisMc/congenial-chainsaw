@@ -43,3 +43,9 @@ list.addEventListener("mouseover", (event) => {
 list.addEventListener("mouseout", (event) => {
     event.target.textContent = event.target.textContent.toLowerCase();
 })
+
+list.addEventListener("click", (event) => {
+    const li = event.target;
+    const ul = li.parentNode;
+    ul.removeChild(li);
+});
