@@ -22,11 +22,24 @@ remove.addEventListener("click", () => {
     list.removeChild(document.querySelector("#list li:last-child"))
 })
 
-for (let listItem of listItems) {
-    listItem.addEventListener("mouseover", () => {
-        listItem.textContent = listItem.textContent.toUpperCase ();
-    });
-    listItem.addEventListener("mouseout", () => {
-        listItem.textContent = listItem.textContent.toLowerCase ();
-    })
-}
+// for (let listItem of listItems) {
+//     listItem.addEventListener("mouseover", () => {
+//         listItem.textContent = listItem.textContent.toUpperCase ();
+//     });
+//     listItem.addEventListener("mouseout", () => {
+//         listItem.textContent = listItem.textContent.toLowerCase ();
+//     })
+// }
+
+document.addEventListener("click", (event) => {
+    console.log(event);
+    console.log(event.target);
+})
+
+list.addEventListener("mouseover", (event) => {
+    event.target.textContent = event.target.textContent.toUpperCase();
+})
+
+list.addEventListener("mouseout", (event) => {
+    event.target.textContent = event.target.textContent.toLowerCase();
+})
